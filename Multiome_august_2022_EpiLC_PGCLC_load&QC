@@ -1,0 +1,32 @@
+---
+title: "Multiome_august_2022_EpiLC_PGCLC"
+output: html_notebook
+---
+
+
+```{r}
+#Load the required libraries 
+
+library(Seurat)
+library(dplyr)
+library(patchwork)
+library(Signac)
+library (BSgenome.Mmusculus.UCSC.mm10)
+library (EnsDb.Mmusculus.v79)
+library(SeuratDisk)
+
+```
+```
+
+#Load the data------------------------------------------------------------
+
+Prior to this: Fastq files were obtained cellranger-arc mkfastq (run by western general facility). Cellranger-arc count was then run for each sample (PGCLC and EpiLC) and results were aggregated through the cell ranger aggr pipeline (cellranger-arc aggr). You need to specify the DIRECTORY where the outputs are, usually names as "outs". 
+Cell ranger runs through command line, code can be found at http://129.215.159.174//reports/index.php?title=Sara_Multiome
+
+##Counts and fragpath-----------------------
+```{r}
+
+counts <- Read10X_h5("/mnt/tchandra-lab/Sara/projects/Multiome/aggr/aggr_EpilC_PGCLC/outs/filtered_feature_bc_matrix.h5")
+fragpath <- "/mnt/tchandra-lab/Sara/projects/Multiome/aggr/aggr_EpilC_PGCLC/outs/atac_fragments.tsv.gz"
+
+```
