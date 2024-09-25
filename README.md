@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @saraglbr
 - 👀 I’m interested in biological data, specifically single cell RNA/multiome data
-- 🌱 I’m currently learning the very basics about python (I've mostly just done R until now)
+- 🌱 I’m currently learning the very basics about python (been doing mostly R so far)
 - 😄 Pronouns: she/her
 - ⚡ Fun fact: Christmas for me actually means going to the beach!
 <!---
